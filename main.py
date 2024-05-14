@@ -11,9 +11,9 @@ choice = input("Для встраивания информации выбери�
 image_number = int(input("Выберите номер изображения (1-3): \n"))
 if choice.upper() == 'E':
     image = Image.open(f"{image_number}.bmp")
-    #message = input("Введите сообщение для встраивания: \n")
-    with open('long_message.txt') as f:
-        message = f.read()
+    message = input("Введите сообщение для встраивания: \n")
+    #with open('long_message.txt') as f:
+    #    message = f.read()
     image1 = interpolation(image)
     image1.save(f"{image_number}_big.bmp")
     image2 = encode(image, message)
